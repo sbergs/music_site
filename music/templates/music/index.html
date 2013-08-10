@@ -1,0 +1,10 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'music/css/normalize.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'music/css/foundation.css' %}" />
+
+
+
+{% for artist in artists %}
+  <h1>{{ artist.name }}</h1>
+{% endfor %}
