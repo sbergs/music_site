@@ -6,6 +6,7 @@ $(document).ready(function() {
     var as = audiojs.createAll();
   });
 
+  // removed time for now will probbaly add back in
   var formatTime = function (length) {
     //length is in ms
     var minutes = length/60000;
@@ -24,7 +25,7 @@ $(document).ready(function() {
     $.getJSON($(this).attr('href'), function(data){
         var trackCount = data.length - 1;
         for (var i = trackCount; i >= 0; i--) {
-            trackHTML = trackHTML + '<li>' + data[i].fields.name + ' (' + formatTime(data[i].fields.length) + ')' + '</li>';
+            trackHTML = trackHTML + '<li>' + data[i].fields.name +'</li>';
         }
 
         trackHTML = trackHTML + '</ul>';
