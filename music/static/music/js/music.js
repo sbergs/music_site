@@ -1,6 +1,11 @@
 
 $(document).ready(function() {
   // Handler for .ready() called.
+
+  audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
+
   var formatTime = function (length) {
     //length is in ms
     var minutes = length/60000;

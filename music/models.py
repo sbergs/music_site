@@ -23,7 +23,7 @@ class Tracks(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=255)
     album = models.ForeignKey(Albums)
-    length = models.IntegerField()
+    path = models.CharField(max_length=1024)
 
     def __unicode__(self):
         return self.name + "(" + self.album.name + ")"

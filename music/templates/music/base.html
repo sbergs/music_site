@@ -3,6 +3,7 @@
 <head>
   <link rel="stylesheet" href="{{ STATIC_URL }}music/css/normalize.css">
   <link rel="stylesheet" href="{{ STATIC_URL }}music/css/foundation.css">
+ <link rel="stylesheet" href="{{ STATIC_URL }}music/css/index.css">
   <!--[if lt IE 10]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
   <title>Music Site</title>
 
@@ -15,7 +16,10 @@
 </head>
 
 <body>
-{% block body %}
+<div id="wrap">
+<div id="main">
+
+  {% block body %}
 <nav class="top-bar" style="">
     <ul class="title-area">
       <!-- Title Area -->
@@ -33,9 +37,16 @@
   {% block content %}
   {% endblock %}
  </div>
+</div>
+</div>
 
- {{ MEDIA_URL }}
+
+<div class="row" id='audioplayer'>
+  <audio src="http://s3.amazonaws.com/audiojs/02-juicy-r.mp3" preload="auto" />
+</div>
+
 <script src="{{ STATIC_URL }}music/js/vendor/jquery.js"></script>
+<script src="{{ STATIC_URL }}music/js/vendor/audio.min.js"></script>
 <script src="{{ STATIC_URL }}music/js/music.js"></script>
 {% endblock %}
 </body>
