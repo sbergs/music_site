@@ -1,9 +1,15 @@
 {% extends "music/base.html" %}
 
 {% block content %}
-  <h3>test</h3>
-  {% for artist in artists %}
-    <h1>{{ artist.name }}</h1>
-  {% endfor %}
-{% endblock content %}
+<div class="large-3 columns" id="artistNav">
+  <ul class="side-nav">
+    {% for artist in artists %}
+    <li><a href="tracks/{{ artist.id }}">{{ artist.name }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
 
+<div class="large-9 columns" id="trackbrowser">
+
+</div>
+{% endblock content %}
