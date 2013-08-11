@@ -3,11 +3,19 @@
 <head>
   <link rel="stylesheet" href="{{ STATIC_URL }}music/css/normalize.css">
   <link rel="stylesheet" href="{{ STATIC_URL }}music/css/foundation.css">
-
+  <!--[if lt IE 10]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
   <title>Music Site</title>
+
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
+  <meta name="author" content="{% block meta_author %}{% endblock %}">
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width">
+
 </head>
 
 <body>
+{% block body %}
 <nav class="top-bar" style="">
     <ul class="title-area">
       <!-- Title Area -->
@@ -26,7 +34,10 @@
   {% endblock %}
  </div>
 
-<script src="{{ STATIC_URL }}music/js/vendor/zepto.js"></script>
+<script src="{{ STATIC_URL }}music/js/vendor/jquery.js"></script>
+<script src="{{ STATIC_URL }}music/js/music.js"></script>
+{% endblock %}
 </body>
-</html>
+
+<html>
 
